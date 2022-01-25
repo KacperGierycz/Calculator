@@ -12,7 +12,7 @@ import Calculate.Calculation;
 
 public class ReadFileTest {
 
-	String input = "add 2 multiply 3 apply 10";
+//	String input = "add 2 multiply 3 apply 10";
 	ReadFile rf=new ReadFile();
 	
 	@Test

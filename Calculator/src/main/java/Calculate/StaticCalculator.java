@@ -20,6 +20,17 @@ public class StaticCalculator {
 		this.value = value;
 	}
 	
+	public void add(int value) {
+
+		
+		this.value+=value;
+		
+		
+	}
+	
+	public void multiply(int value) {
+		this.value=this.value*value;
+	}
 	 
 	
 
