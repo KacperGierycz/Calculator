@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Deque;
 
 import Calculate.Calculation;
-import Calculate.StaticCalculator;
+import Calculate.Calculator;
 import FileReader.ReadFile;
 
 public class CalculatorRuner {
@@ -14,7 +14,7 @@ public class CalculatorRuner {
 		ReadFile rf=new ReadFile();
 		Deque<Calculation> calculations=rf.read();
 		int initValue=calculations.removeLast().getValue();
-		StaticCalculator sc=new StaticCalculator(initValue);
+		Calculator sc=new Calculator(initValue);
 		
 		CalculatorSwitch cSwitch=new CalculatorSwitch();
 		cSwitch.calculatorSwitch(sc, calculations);

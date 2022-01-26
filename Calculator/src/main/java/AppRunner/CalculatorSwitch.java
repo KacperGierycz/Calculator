@@ -3,13 +3,13 @@ package AppRunner;
 import java.util.Deque;
 
 import Calculate.Calculation;
-import Calculate.StaticCalculator;
+import Calculate.Calculator;
 
 public class CalculatorSwitch {
 	
 	
 	
-	public void calculatorSwitch(StaticCalculator sc, Deque<Calculation> calculations) {
+	public void calculatorSwitch(Calculator sc, Deque<Calculation> calculations) {
 		
 		while(!calculations.isEmpty()) {
 			Calculation oper=calculations.remove();

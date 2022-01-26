@@ -29,7 +29,7 @@ public class ReadFile {
 		    	  calculations.add(calc);
 		    	  
 		    	  
-		       // String data = myReader.nextLine();
+
 		       // System.out.println(data);
 		      }
 		      myReader.close();
