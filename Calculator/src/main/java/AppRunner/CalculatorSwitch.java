@@ -24,6 +24,10 @@ public class CalculatorSwitch {
 			break;
 			case"multiply":sc.multiply(value);
 			break;
+			case"subtract":sc.subtract(value);
+			break;
+			case"divide":sc.divide(value);
+			break;
 			default: throw new RuntimeException("unsupported operation");
 			
 			

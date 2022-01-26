@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Deque;
 import java.util.LinkedList;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import Calculate.Calculation;
@@ -13,7 +14,15 @@ import Calculate.Calculation;
 public class ReadFileTest {
 
 //	String input = "add 2 multiply 3 apply 10";
-	ReadFile rf=new ReadFile();
+	
+
+
+	ReadFile rf;
+	
+	@Before
+	public void setup() {
+		rf=new ReadFile();
+	}
 	
 	@Test
 	public void inputTest() throws IOException {

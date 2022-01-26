@@ -1,6 +1,6 @@
 package Calculate;
 
-public class Calculator {
+public class Calculator implements CalculatorI {
 
 	
 	private int value;
@@ -40,6 +40,7 @@ public class Calculator {
 		if(value==0) {
 			throw new RuntimeException("can't devide by 0");
 		}
+		
 		this.value=this.value/value;
 	}
 	 

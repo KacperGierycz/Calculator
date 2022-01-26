@@ -17,7 +17,10 @@ public class ReadFile {
 		Deque<Calculation> calculations=new LinkedList<>();
 		
 		    try {
+		    	
 		      File myObj = new File("src/main/resources/input.txt");
+		      
+		      
 		      Scanner myReader = new Scanner(myObj);
 		      
 		      while (myReader.hasNextLine()) {
@@ -37,7 +40,7 @@ public class ReadFile {
 		      System.out.println("An error occurred.");
 		      e.printStackTrace();
 		    }
-		    System.out.println(calculations);
+		    
 			return calculations;
 		}
 	
