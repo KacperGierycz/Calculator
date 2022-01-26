@@ -13,7 +13,17 @@ public class CalculatorRuner {
 		
 		ReadFile rf=new ReadFile();
 		Deque<Calculation> calculations=rf.read();
-		int initValue=calculations.removeLast().getValue();
+		int initValue=0;
+		
+		if (calculations.getLast().getOperation().equals("apply")) {
+		
+		 initValue=calculations.removeLast().getValue();
+		}
+		else {
+			System.out.println( "no apply; defoult value: 0");
+		}
+		
+		
 		System.out.println("value initialized with: "+initValue);
 		
 		Calculator sc=new Calculator(initValue);

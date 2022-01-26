@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 import Calculate.Calculation;
 import Calculate.Operation;
@@ -24,16 +25,19 @@ public class ReadFile {
 		      Scanner myReader = new Scanner(myObj);
 		      
 		      while (myReader.hasNextLine()) {
-		    	  
-		    	  String operation=myReader.next();
-		    	  int value = myReader.nextInt();
-		    	  
-		    	  Calculation calc=new Operation(operation,value);
-		    	  calculations.add(calc);
-		    	  
-		    	  
+		      
 
-		       // System.out.println(data);
+		    	 myReader.skip("\\s*");
+		    	 if (!myReader.hasNextLine()) {
+		    		 break;
+		    	 }
+
+			    	  String operation=myReader.next();
+			    	  int value = myReader.nextInt();
+
+			    	  Calculation calc=new Operation(operation,value);
+			    	  calculations.add(calc);
+		      
 		      }
 		      myReader.close();
 		    } catch (FileNotFoundException e) {
